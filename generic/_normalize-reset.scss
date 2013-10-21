@@ -8,47 +8,41 @@
  * Correct `block` display not defined in IE 8/9.
  */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-    display: block;
-}
+ @if $use-html5 == true {
+	@if $reset-items-html5{
+	#{$reset-items-html5} {
+		display: block;
+	}
+	}
 
-/*
- * Correct `inline-block` display not defined in IE 8/9.
- */
+	/*
+	 * Correct `inline-block` display not defined in IE 8/9.
+	 */
+	@if $reset-items-html5-media{
+	#{$reset-items-html5-media}{
+		display: inline-block;
+	}
+	}
 
-audio,
-canvas,
-video {
-    display: inline-block;
-}
 
-/*
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
+	/*
+	 * Prevent modern browsers from displaying `audio` without controls.
+	 * Remove excess height in iOS 5 devices.
+	 */
+	@if index($reset-items-html5-media, "audio") {
+		audio:not([controls]) {
+			display: none;
+			height: 0;
+		}
+	}
 
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
+	/*
+	 * Address styling not present in IE 8/9.
+	 */
 
-/*
- * Address styling not present in IE 8/9.
- */
-
-[hidden] {
-    display: none;
+	[hidden] {
+		display: none;
+	}
 }
 
 /* ==========================================================================
@@ -394,3 +388,5 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+

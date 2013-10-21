@@ -62,8 +62,7 @@
  * IMPORTS.............Begin importing the sections below
  *
  * MIXINS..............Super-simple Sass stuff
- * NORMALIZE...........normalize.css
- * RESET...............Set some defaults
+ * NORMALIZE-RESET....normalize.css and set some defaults
  * CLEARFIX............
  * SHARED..............Shared declarations
  *
@@ -143,8 +142,7 @@
  */
 @import "defaults";
 @import "generic/mixins";
-@import "generic/normalize";
-@import "generic/reset";
+@import "generic/normalize-reset";
 @import "generic/clearfix";
 @import "generic/shared";
 

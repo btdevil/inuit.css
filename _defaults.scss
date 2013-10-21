@@ -223,3 +223,15 @@ $use-greybox:       false!default;
 $base-spacing-unit: $base-line-height!default;
 $half-spacing-unit: $base-spacing-unit / 2!default;
 $line-height-ratio: $base-line-height / $base-font-size;
+
+
+/*------------------------------------*\
+    $SKINNY-INUIT
+\*------------------------------------*/
+
+$use-helpers: true!default;
+$use-brand: true!default;
+$reset-items: ""!default;
+$use-html5: true!default;
+$reset-items-html5: article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary!default;
+$reset-items-html5-media: audio, canvas, video!default;
